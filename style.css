@@ -1,0 +1,281 @@
+@font-face {
+	font-family: 'Roboto-Bold';
+	src: url(fonts/Roboto-Bold.ttf);
+} 
+
+@font-face {
+	font-family: 'Roboto';
+	src: url(fonts/Roboto-Regular.ttf);
+}
+
+* {
+	font-family: 'Roboto', sans-serif;
+	--blue-color: #1992d4;
+	--gray-color: #E2E8F0;
+	--card-left-border-color: #F0B429;
+	--gray-box-shadow: #CFD4DB;
+	--card-box-shadow: #D0D6DD;
+	--card-icon-color: #333333;
+
+	--left-border-px: 8px;
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	height: 100%;
+	margin: 0;
+}
+
+h1 {
+	font-weight: 500;
+	font-size: 28px;
+}
+
+h2 {
+	font-size: 20px;
+}
+
+input {
+	background-color: var(--gray-color);
+	border: none;
+	border-radius: 24px;
+	font-size: 16px;
+	width: 85%;
+	margin-left: 16px;
+	padding: 8px 8px 8px 12px;
+}
+
+img {
+	width: 28px;
+	height: 28px;
+}
+
+/* Apply bold font to below elements */
+h1,
+.navigation > ul > li,
+#user-name,
+.user-btn,
+.left-content > div:first-child,
+.announcements > div:first-child,
+.trending > div:first-child,
+.card > div:first-child {
+	font-family: 'Roboto-Bold', sans-serif;
+}
+
+/* Container */
+.container {
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns:  1fr 4fr;
+	height: 100%;
+
+}
+
+/* Sidebar */
+.sidebar {
+	display: grid;
+	background-color: var(--blue-color);
+	color: white;
+	grid-template-columns: 1fr 3fr;
+	grid-row: 1 / 6;
+	box-shadow: 2px 0 2px #E4E4E4;
+	z-index: 2;
+}
+
+.branding {
+	display: grid;
+	
+}
+
+.branding > img {
+	justify-content: center;
+	align-items: center;
+}
+
+.branding img:first-child {
+	width: 48px;
+	height: 48px;
+}
+
+.navigation {
+	margin-left: 0;
+	display: grid;
+	font-size: 18px;
+	row-gap: 16px;
+}
+
+.navigation > ul > li {
+	list-style-type: none;
+}
+
+
+.navigation div:first-child {
+	font-size: 32px;
+	margin-bottom: 16px;
+	margin-top: 8px;
+}
+
+/* Header */
+
+.header {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 80px auto;
+	grid-column: 2 / -1;
+	box-shadow: 0 4px 12px 8px var(--gray-box-shadow);
+	z-index: 1;
+}
+
+.upper-header,
+.lower-header {
+	margin: 0 48px;
+}
+
+.upper-header {
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.search {
+	display: grid;
+	align-items: center;
+	grid-template-columns: 28px 1fr;
+}
+
+.user-account {
+	display: grid;
+	grid-template-columns: 48px 64px auto;
+	align-items: center;
+	column-gap: 24px;
+	margin-left: 42px;
+}
+
+#user-name {
+	font-size: 20px;
+}
+
+.lower-header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding: 8px 0 18px 0;
+}
+
+.user-info {
+	display: grid;
+	grid-template-columns: 84px auto;
+	column-gap: 24px;
+	align-items: center;
+}
+
+.user-info > div:first-child {
+	width: 84px;
+	height: 84px;
+}
+
+.user-profile-container {
+	border-radius: 50%;
+	height: 52px;
+	width: 52px;
+	display: grid;
+}
+
+.user-profile-photo {
+	justify-self: center;
+	align-self: center;
+	height: 75%;
+	width: 75%;
+}
+
+.user-btns {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	column-gap: 32px;
+	align-items: center;
+	justify-self: end;
+	margin-right: 16px;
+}
+
+.user-btn {
+	background-color: var(--blue-color);
+	color: white;
+	border-radius: 24px;
+	border: none;
+	width: 108px;
+	height: 42px;
+	font-size: 18px;
+}
+
+/* Main content */
+
+.main-content {
+	display: grid;
+	background-color: var(--gray-color);
+	grid-template-columns: 3fr 1fr;
+	z-index: 0;
+	padding: 24px;
+}
+
+.projects {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: repeat(3, 1fr);
+	gap: 16px;
+}
+
+.right-content {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+}
+
+.card {
+	background-color: white;
+	box-shadow: 1px 1px 1px 1px;
+	border-radius: var(--left-border-px);
+	width: 128px;
+	height: 108px;
+	padding: 16px;
+	display: grid;
+}
+
+.project {
+	border-left: var(--left-border-px) solid var(--card-left-border-color);
+}
+
+.card > p {
+	color: gray;
+}
+
+.card-icons {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-self: right;
+}
+
+.card-icons > img {
+	color: var(--card-icon-color);
+}
+
+.trending-profile {
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+}
+
+/* users */
+
+#user-morgan {
+	background-color: #FACC15;
+}
+
+#user-tegan {
+	background-color: #E0F1FD;
+}
+
+#user-kendall {
+	background-color: #A2A2A2;
+}
+
+#user-alex {
+	background-color: #FAA2AD;
+}
