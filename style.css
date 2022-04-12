@@ -42,8 +42,12 @@ h2 {
 	padding-top: 42px;
 }
 
+h3 {
+	font-weight: 200;
+	font-size: 20px;
+}
+
 h6 {
-	font-family: 'Roboto-Bold';
 	font-weight: 400;
 }
 
@@ -80,11 +84,12 @@ img {
 
 /* Apply bold font to below elements */
 h1,
+h3,
+h6,
 .navigation > ul > li,
 #user-name,
 .user-btn,
 .left-content > div:first-child,
-.announcements > div:first-child,
 .trending > div:first-child,
 .card > div:first-child {
 	font-family: 'Roboto-Bold', sans-serif;
@@ -296,6 +301,8 @@ h1,
 	color: var(--card-icon-color);
 }
 
+/* Annoucements */
+
 .announcements {
 	row-gap: 16px;
 	margin: 14px 0 14px 0;
@@ -310,13 +317,28 @@ h1,
 	padding-top: 4px;
 }
 
+/* Trending */
+
 .trending {
 	grid-row: 2 / 3;
+}
+
+.trends {
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	row-gap: 24px;
+	padding: 12px;
 }
 
 .trending-profile {
 	display: grid;
 	grid-template-columns: 1fr 2fr;
+	align-items: center;
+}
+
+.trending-profile > {
+	font: 1em sans-serif;
+
 }
 
 /* users */
